@@ -6,3 +6,10 @@ resource "aws_s3_bucket" "terraform-cloud-101-s3" {
     createdby = "terraform"
   }
 }
+
+resource "aws_s3_bucket_public_access_block" "terraform-cloud-101-s3" {
+  bucket = aws_s3_bucket.terraform-cloud-101-s3.id
+
+  block_public_acls       = true
+  block_public_policy     = true
+}

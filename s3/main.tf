@@ -15,7 +15,7 @@ resource "aws_s3_bucket_public_access_block" "terraform-cloud-101-s3" {
 }
 
 resource "aws_s3_bucket" "terraform-cloud-101-s3-02" {
-  bucket = "s3-terraform-1338-2023"
+  bucket = "s3-terraform-1338"
 
   tags = {
     env = "demo",

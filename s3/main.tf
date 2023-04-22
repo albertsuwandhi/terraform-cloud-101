@@ -14,8 +14,8 @@ resource "aws_s3_bucket_public_access_block" "terraform-cloud-101-s3" {
   block_public_policy     = true
 }
 
-resource "aws_s3_bucket" "terraform-cloud-101-s3-02" {
-  bucket = "s3-terraform-1338"
+resource "aws_s3_bucket" "terraform-cloud-101-s3-x" {
+  bucket = "s3-terraform-2023"
 
   tags = {
     env = "demo",

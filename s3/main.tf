@@ -16,13 +16,13 @@ resource "aws_s3_bucket" "terraform-cloud-101-s3-02" {
   }
 }
 
-resource "aws_instance" "example" {
-  ami           = "ami-0a72af05d27b49ccb"
-  instance_type = "t3.micro"
+# resource "aws_instance" "example" {
+#   ami           = "ami-0a72af05d27b49ccb"
+#   instance_type = "t3.micro"
 
-  tags = {
-    name = "EC2-${var.env}",
-    createdby = "terraform"
-  }
+#   tags = {
+#     name = "EC2-${var.env}",
+#     createdby = "terraform"
+#   }
 
-}
+# }

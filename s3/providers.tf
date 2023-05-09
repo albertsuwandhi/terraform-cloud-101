@@ -1,11 +1,9 @@
-# Setup terraform cloud and workspace
 terraform {
-  backend "remote" {
-    hostname     = "app.terraform.io"
+  cloud {
     organization = "albertsuwandhi"
 
     workspaces {
-      name = "terraform-cloud-101"
+      name = "terraform-cloud-vcs-workflow"
     }
   }
 }

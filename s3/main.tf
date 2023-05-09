@@ -1,24 +1,28 @@
-# resource "aws_s3_bucket" "terraform-cloud-101-s3" {
-#   bucket = "s3-terraform-1337"
+resource "aws_s3_bucket" "terraform-cloud-101-s3-01" {
+  bucket = "s3-terraform-1337-01"
 
-#   tags = {
-#     env = "demo",
-#     createdby = "terraform"
-#   }
-# }
+  tags = {
+    env = "${var.env}",
+    createdby = "terraform"
+  }
+}
 
-# resource "aws_s3_bucket_public_access_block" "terraform-cloud-101-s3" {
-#   bucket = aws_s3_bucket.terraform-cloud-101-s3.id
+resource "aws_s3_bucket" "terraform-cloud-101-s3-02" {
+  bucket = "s3-terraform-1337-02"
 
-#   block_public_acls       = true
-#   block_public_policy     = true
-# }
+  tags = {
+    env = "${var.env}",
+    createdby = "terraform"
+  }
+}
 
-# resource "aws_s3_bucket" "terraform-cloud-101-s3-x" {
-#   bucket = "s3-terraform-2023"
+resource "aws_instance" "example" {
+  ami           = "ami-0a72af05d27b49ccb"
+  instance_type = "t3.micro"
 
-#   tags = {
-#     env = "demo",
-#     createdby = "terraform"
-#   }
-# }
+  tags = {
+    name = "EC2-${var.env}",
+    createdby = "terraform"
+  }
+
+}

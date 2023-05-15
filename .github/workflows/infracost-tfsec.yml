@@ -12,6 +12,21 @@ jobs:
              soft_fail: true
              working_directory: ./s3
              additional_args: --concise-output
+
+  checkov:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Test with Checkov
+        uses: bridgecrewio/checkov-action@master
+        with:
+          directory: s3
+          framework: terraform
+          soft_fail: true
              
   infracost:
     name: Infracost

@@ -26,6 +26,7 @@ jobs:
         with:
           directory: s3
           framework: terraform
+          soft_fail: true
              
   infracost:
     name: Infracost

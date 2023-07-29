@@ -27,14 +27,14 @@ resource "aws_instance" "example" {
 
 }
 
-# resource "aws_instance" "example2" {
-#   ami           = "ami-0a72af05d27b49ccb"
-#   instance_type = "t3.micro"
+resource "aws_instance" "example2" {
+  ami           = "ami-0a72af05d27b49ccb"
+  instance_type = "t3.medium"
 
-#   tags = {
-#     name = "EC2-${var.env}",
-#     createdby = "terraform"
-#   }
+  tags = {
+    Name = "EC2-${var.env}",
+    createdby = "terraform"
+  }
 
-# }
+}
 

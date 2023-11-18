@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "terraform-cloud-101-s3-01" {
-  bucket = "s3-terraform-1337-01"
+  bucket = "s3-terraform-1337-001"
 
   tags = {
     env = "${var.env}",
